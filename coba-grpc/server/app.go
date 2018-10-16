@@ -5,8 +5,8 @@ import (
 	"log"
 	"net"
 
-	"github.com/tokopedia/coba-grpc/hello"
-	"github.com/tokopedia/iris/src/go/hub/data"
+	"github.com/baitpuisi/go-example-project/coba-grpc/hello"
+
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
 )
@@ -15,8 +15,6 @@ type server struct{}
 
 func (s *server) HelloWorld(ctx context.Context, req *hello.HelloRequest) (*hello.HelloResponse, error) {
 	log.Printf("REQUEST  %+v", *req)
-	val, _ := data.GetTracker(ctx, 1)
-	log.Println("Data : ", val)
 
 	return &hello.HelloResponse{Success: true, Message: "success"}, nil
 }

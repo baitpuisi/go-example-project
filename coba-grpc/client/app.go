@@ -4,8 +4,7 @@ import (
 	"context"
 	"log"
 
-	"github.com/tokopedia/coba-grpc/hello"
-
+	"github.com/baitpuisi/go-example-project/coba-grpc/hello"
 	"google.golang.org/grpc"
 )
 
